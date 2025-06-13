@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const employeeSchema = new Schema({
 
-    fulname: {
+    fullname: {
         type: String
     },
     email: {

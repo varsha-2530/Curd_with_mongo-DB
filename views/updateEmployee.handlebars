@@ -1,0 +1,24 @@
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        {{!-- <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">City</th> --}}
+        <th scope="col">edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each emp}}
+        <tr class="table-active">
+          <td scope="row">{{this.fullname}}</td>
+          {{!-- <td scope="row">{{this.email}}</td>
+          <td scope="row">{{this.phone}}</td>
+          <td scope="row">{{this.city}}</td> --}}
+          <td scope="row"><a href="/emp/editEmployee/{{this._id}}">edit</a></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

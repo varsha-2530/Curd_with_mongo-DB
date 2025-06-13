@@ -1,0 +1,30 @@
+<div class="container custom-table-container">
+    <h2 class="table-heading">Employee List</h2>
+    <div class="table-responsive">
+        <table class="table table-hover custom-table">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each list}}
+                <tr>
+                    <td scope="row" class="text-uppercase">{{this.fullname}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{this.phone}}</td>
+                    <td>{{this.city}}</td>
+                    <td>
+                        <a href="/emp/final-delete/{{this._id}}   " class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>  
