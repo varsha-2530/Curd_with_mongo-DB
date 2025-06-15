@@ -37,38 +37,74 @@ router.get('/show-all-emp', async (req, res) => {
       res.render("showEmp", { list: result })
    } catch (error) {
       console.log(error);
-      
+
    }
 });
 
 //delete
 
-router.get('/delete-all-Emp', async (req, res)=>{
+router.get('/delete-all-Emp', async (req, res) => {
    try {
-        const result = await Employee.find()
+      const result = await Employee.find()
       //   console.log(result);
 
-        res.render('deleteEmp', {list : result});
-         
+      res.render('deleteEmp', { list: result });
+
    } catch (error) {
       console.log(error)
    }
 });
 
-router.get('/final-delete/:uid', async(req, res)=>{
-     try {
-        const result = await Employee.findByIdAndDelete( req.params.uid);
-        res.redirect('/emp/delete-all-emp');
-     } catch (error) {
-   
-     }
+router.get('/final-delete/:uid', async (req, res) => {
+   try {
+      const result = await Employee.findByIdAndDelete(req.params.uid);
+      res.redirect('/emp/delete-all-emp');
+   } catch (error) {
+      console.log(error);
+
+   }
 });
 
-router.get('/updateEmploye', async (req,res)=>{
+//update
 
-})
+router.get('/updateEmploye', async (req, res) => {
+   try {
+      let emp = await Employee.find();
+      // let empdata = emp.map(empdata => empdata.toObject());
+      res.render("updateEmployee", { emp });
+   } catch (err) {
+      console.log(err)
+   }
+});
+
+
+router.get("/editEmployee/:id", async(req, res)=>{
+   try{
+       // console.log(req.params.id)
+       let employee = await Employee.findById(req.params.id);
+       console.log(employee)
+       res.render("editEmployee", {employee});
+   }catch(err){
+       console.log(err)
+   }
+});
+
+router.post('/updateEmp/:id', async (req, res) => {
+   try {
+       const editEmp = await Employee.findByIdAndUpdate(req.params.id, req.body, { new: true });
+      //  console.log("Updated Employee:", editEmp);
+       res.redirect('/emp/show-all-emp');
+   } catch (error) {
+       console.log(error);
+       res.status(500).send("Failed to update employee");
+   }
+});
+
+
+
+
+
 
 module.exports = router
 
 
-   

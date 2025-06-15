@@ -1,24 +1,29 @@
-<div class="container">
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th scope="col">Name</th>
-        {{!-- <th scope="col">Email</th>
-        <th scope="col">Phone</th>
-        <th scope="col">City</th> --}}
-        <th scope="col">edit</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each emp}}
-        <tr class="table-active">
-          <td scope="row">{{this.fullname}}</td>
-          {{!-- <td scope="row">{{this.email}}</td>
-          <td scope="row">{{this.phone}}</td>
-          <td scope="row">{{this.city}}</td> --}}
-          <td scope="row"><a href="/emp/editEmployee/{{this._id}}">edit</a></td>
+ <div class="container">
+    <h2 class="head">Update Employee List</h2>
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+          <th scope="col">City</th> 
+          <th scope="col">Edit</th>
         </tr>
-      {{/each}}
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        {{#each emp}}
+          <tr>
+            <td class="nam">{{this.fullname}}</td>
+             <td>{{this.email}}</td>
+            <td>{{this.phone}}</td>
+            <td>{{this.city}}</td>
+            <td><a class="btn-edit" href="/emp/editEmployee/{{this._id}}">Edit</a></td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+     <div class="container text-end mt-3">
+    <a href="/" class="btn btn-outline-secondary">🏠 Go to Home</a>
+  </div>
 </div>
+  </div>

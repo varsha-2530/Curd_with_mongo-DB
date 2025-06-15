@@ -1,30 +1,4 @@
 {{!-- <div class="container custom-table-container">
-    <h2>Employee List</h2>
-    <table class="table table-hover custom-table">
-      <thead>
-        <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Email</th>
-          <th scope="col">Phone</th>
-          <th scope="col">City</th>
-        </tr>
-      </thead>
-      <tbody>
-        {{#each list}}
-          <tr class="table-active">
-            <td scope="row">{{this.fullname}}</td>
-            <td>{{this.email}}</td>
-            <td>{{this.phone}}</td>
-            <td>{{this.city}}</td>
-          </tr>
-        {{/each}}
-      </tbody>
-    </table>
-  </div>
-   --}}
-
-
-   <div class="container custom-table-container">
   <h2 class="table-heading">Employee List</h2>
   <div class="table-responsive">
     <table class="table table-hover custom-table">
@@ -38,14 +12,49 @@
       </thead>
       <tbody>
         {{#each list}}
-          <tr>
-            <td scope="row" class="text-uppercase">{{this.fullname}}</td>
-            <td>{{this.email}}</td>
-            <td>{{this.phone}}</td>
-            <td>{{this.city}}</td>
-          </tr>
+        <tr>
+          <td scope="row" class="text-uppercase">{{this.fullname}}</td>
+          <td>{{this.email}}</td>
+          <td>{{this.phone}}</td>
+          <td>{{this.city}}</td>
+        </tr>
         {{/each}}
       </tbody>
     </table>
+
+    <div class="container text-end mt-3">
+    <a href="/" class="btn btn-outline-secondary">🏠 Go to Home</a>
+  </div>
+</div>
+</div> --}}
+
+<div class="container mt-5">
+  <h2 class="text-center fw-bold display-6 mb-4 text-primary shadow-sm">👨‍💼 Employee List</h2>
+
+  <div class="table-responsive rounded-4 shadow-lg p-4 bg-white border border-3 border-light">
+    <table class="table table-hover align-middle text-center shadow-sm custom-3d-table">
+      <thead class="table-primary shadow-sm rounded">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>City</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each list}}
+        <tr class="hover-row">
+          <td class="text-uppercase fw-semibold">{{this.fullname}}</td>
+          <td>{{this.email}}</td>
+          <td>{{this.phone}}</td>
+          <td>{{this.city}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="text-end mt-4">
+    <a href="/" class="btn btn-lg btn-outline-dark rounded-pill px-4 shadow-sm">🏠 Go to Home</a>
   </div>
 </div>

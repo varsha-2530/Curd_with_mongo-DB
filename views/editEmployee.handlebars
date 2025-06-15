@@ -1,0 +1,59 @@
+  <div class="container">
+    <form action="/emp/updateEmp/{{employee._id}}" method="post">
+      <div>
+      <fieldset>
+        <label class="form-label mt-4" for="readOnlyInput" >Enter Your Name : </label>
+        <input
+          class="form-control"
+          type="text"
+          name="fullname"
+          placeholder="Enter Your Name"
+          value="{{employee.fullname}}"
+          
+        />
+      </fieldset>
+    </div>
+      <div>
+      <fieldset>
+        <label class="form-label mt-4" for="readOnlyInput">Enter Your Email : </label>
+        <input
+          class="form-control"
+          type="text"
+          name="email"
+          placeholder="Enter Your Name"
+          value="{{employee.email}}"
+        />
+      </fieldset>
+    </div>
+      <div>
+      <fieldset>
+        <label class="form-label mt-4" for="readOnlyInput">Enter Your Phone : </label>
+        <input
+          class="form-control"
+          type="text"
+          name="phone"
+          placeholder="Enter Your Name"
+          value="{{employee.phone}}"
+        />
+      </fieldset>
+    </div>
+      <div>
+      <fieldset>
+        <label class="form-label mt-4" for="readOnlyInput">Enter Your City : </label>
+        <input
+          class="form-control"
+          type="text"
+          name="city"
+          placeholder="Enter Your Name"
+          value="{{employee.city}}"
+        />
+      </fieldset>
+    </div>
+    <br>
+    <input type="submit" >
+    </form>
+    <div class="container text-end mt-3">
+      <a href="/" class="btn btn-outline-secondary">🏠 Go to Home</a>
+    </div>
+  </div>  
+  </div>

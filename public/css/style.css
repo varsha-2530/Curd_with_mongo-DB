@@ -1,68 +1,134 @@
-    /* public/css/style.css */
-.btn-custom {
-    padding: 14px 28px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    border-radius: 50px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  }
-  
-  .btn-custom:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
-  }
-  
-  .btn-custom:active {
-    transform: scale(0.96);
-    box-shadow: inset 0 4px 6px rgba(0,0,0,0.2);
-  }
-  
-  h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    text-shadow: 1px 2px 4px rgba(0,0,0,0.2);
-  }
-  
-/*show-Emp*/
+/* Global Dark Theme */
+body {
+  background-color: #121212;
+  color: #c2bebe;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-.custom-table-container {
-  margin-top: 40px;
-  padding: 30px;
-  background-color: #2b2b2b;
+h1, h2 {
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 255, 255, 0.15);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #00e5ff;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+/* Button Styling */
+.btn-custom {
+  padding: 14px 28px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  background-color: #00e5ff;
+  color: #000;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 255, 255, 0.4);
+}
+
+.btn-custom:active {
+  transform: scale(0.96);
+  box-shadow: inset 0 4px 6px rgba(0, 255, 255, 0.2);
+}
+
+/* Container Style */
+.container {
+  margin-top: 60px;
+  background-color: #1e1e1e;
+  padding: 40px;
   border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+/* Table Styling - Show/Update */
+.custom-table-container {
+  background-color: #1b1b1b;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 255, 255, 0.15);
 }
 
 .table-heading {
-  text-align: center;
-  color: #ffffff;
-  margin-bottom: 30px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  color: #00e5ff;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .custom-table {
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
-  background-color: #1c1c1c;
-  color: #ffffff;
+  background-color: #232323;
+  color: #d9cccc;
 }
 
 .custom-table thead th {
-  background-color: #3a3a3a;
-  color: #ffffff;
-  font-weight: 600;
-  text-align: center;
+  background-color: #2a2a2a;
+  color: #00e5ff;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border-bottom: 2px solid #00e5ff;
 }
 
 .custom-table tbody td {
   text-align: center;
-  vertical-align: middle;
+  padding: 12px 15px;
+}
+
+.custom-table tbody tr {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .custom-table tbody tr:hover {
-  background-color: #343a40;
+  transform: scale(1.02);
+  background-color: #2f2f2f;
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.1);
 }
 
+/* Edit Button */
+.btn-edit {
+  color: #00e5ff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.btn-edit:hover {
+  color: #03fcec;
+  text-decoration: underline;
+}
+
+/* Home Button at Bottom */
+.text-end a.btn {
+  margin-top: 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 10px 30px;
+  background-color: transparent;
+  border: 2px solid #00e5ff;
+  color: #00e5ff;
+  transition: all 0.3s ease;
+}
+
+.text-end a.btn:hover {
+  background-color: #00e5ff;
+  color: #000;
+  box-shadow: 0 8px 16px rgba(0, 255, 255, 0.3);
+}
