@@ -4,10 +4,12 @@ const app = express();
 const Handlebars = require('handlebars');
 const engine = require('express-handlebars').engine;
 const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
+require('dotenv').config()
+
 
 connectDB();
 
-const PORT = 3000;
+const PORT =        process.env.PORT || 3000;
 
 app.use(express.static('public'));
 app.use(express.json());
