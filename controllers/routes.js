@@ -2,9 +2,10 @@ const express = require("express");
 const router = express.Router()
 const Employee = require('../models/connection.model')
 
-router.get('/add-emp', (req, res) => {
+router.get('/add-emp', async (req, res) => {
    res.render("addemp")
 });
+
 
 router.post("/save-emp", async (req, res) => {
    try {
@@ -28,6 +29,7 @@ router.post("/save-emp", async (req, res) => {
    }
 
 });
+
 // show data
 router.get('/show-all-emp', async (req, res) => {
    try {

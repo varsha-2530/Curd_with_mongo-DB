@@ -22,6 +22,7 @@ app.engine('handlebars', engine({
     defaultLayout: 'main',
     handlebars: allowInsecurePrototypeAccess(Handlebars)
 }));
+
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
@@ -33,7 +34,7 @@ app.use('/emp', require('./controllers/routes'));
 
 // Start server
 const PORT = process.env.PORT || 3000;
-    
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
